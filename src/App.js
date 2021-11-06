@@ -18,56 +18,76 @@ class App extends Component {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(users => {
-
-                const simoneJson = JSON.parse("{\n" +
-                    "    \"id\": 11,\n" +
-                    "    \"name\": \"Simone\",\n" +
-                    "    \"username\": \"simone\",\n" +
-                    "    \"email\": \"scoester50@gmail.com\",\n" +
-                    "    \"address\": {\n" +
-                    "        \"street\": \"Kulas Light\",\n" +
-                    "        \"suite\": \"Apt. 556\",\n" +
-                    "        \"city\": \"Gwenborough\",\n" +
-                    "        \"zipcode\": \"92998-3874\",\n" +
-                    "        \"geo\": {\n" +
-                    "            \"lat\": \"-37.3159\",\n" +
-                    "            \"lng\": \"81.1496\"\n" +
-                    "        }\n" +
-                    "    },\n" +
-                    "    \"phone\": \"1-770-736-8031 x56442\",\n" +
-                    "    \"website\": \"hildegard.org\",\n" +
-                    "    \"company\": {\n" +
-                    "        \"name\": \"Romaguera-Crona\",\n" +
-                    "        \"catchPhrase\": \"Multi-layered client-server neural-net\",\n" +
-                    "        \"bs\": \"harness real-time e-markets\"\n" +
-                    "    }\n" +
-                    "}")
-                const jevJson = JSON.parse("{\n" +
-                    "    \"id\": 12,\n" +
-                    "    \"name\": \"Jev\",\n" +
-                    "    \"username\": \"jev\",\n" +
-                    "    \"email\": \"jevprentice@gmail.com\",\n" +
-                    "    \"address\": {\n" +
-                    "        \"street\": \"Kulas Light\",\n" +
-                    "        \"suite\": \"Apt. 556\",\n" +
-                    "        \"city\": \"Gwenborough\",\n" +
-                    "        \"zipcode\": \"92998-3874\",\n" +
-                    "        \"geo\": {\n" +
-                    "            \"lat\": \"-37.3159\",\n" +
-                    "            \"lng\": \"81.1496\"\n" +
-                    "        }\n" +
-                    "    },\n" +
-                    "    \"phone\": \"1-770-736-8031 x56442\",\n" +
-                    "    \"website\": \"hildegard.org\",\n" +
-                    "    \"company\": {\n" +
-                    "        \"name\": \"Romaguera-Crona\",\n" +
-                    "        \"catchPhrase\": \"Multi-layered client-server neural-net\",\n" +
-                    "        \"bs\": \"harness real-time e-markets\"\n" +
-                    "    }\n" +
-                    "}")
-
-                users.push(simoneJson)
-                users.push(jevJson)
+                let nextId = 11;
+                users.push({
+                    "id": nextId++,
+                    "name": "Simone",
+                    "username": "simone",
+                    "email": "email@address.com",
+                    "address": {
+                        "street": "Kulas Light",
+                        "suite": "Apt. 556",
+                        "city": "Gwenborough",
+                        "zipcode": "92998-3874",
+                        "geo": {
+                            "lat": "-37.3159",
+                            "lng": "81.1496"
+                        }
+                    },
+                    "phone": "1-770-736-8031 x56442",
+                    "website": "hildegard.org",
+                    "company": {
+                        "name": "Romaguera-Crona",
+                        "catchPhrase": "Multi-layered client-server neural-net",
+                        "bs": "harness real-time e-markets"
+                    }
+                })
+                users.push({
+                    "id": nextId++,
+                    "name": "Jev",
+                    "username": "jev",
+                    "email": "email@address.com",
+                    "address": {
+                        "street": "Kulas Light",
+                        "suite": "Apt. 556",
+                        "city": "Gwenborough",
+                        "zipcode": "92998-3874",
+                        "geo": {
+                            "lat": "-37.3159",
+                            "lng": "81.1496"
+                        }
+                    },
+                    "phone": "1-770-736-8031 x56442",
+                    "website": "hildegard.org",
+                    "company": {
+                        "name": "Romaguera-Crona",
+                        "catchPhrase": "Multi-layered client-server neural-net",
+                        "bs": "harness real-time e-markets"
+                    }
+                })
+                users.push({
+                    "id": nextId++,
+                    "name": "Raymond",
+                    "username": "rayray",
+                    "email": "email@address.com",
+                    "address": {
+                        "street": "Kulas Light",
+                        "suite": "Apt. 556",
+                        "city": "Gwenborough",
+                        "zipcode": "92998-3874",
+                        "geo": {
+                            "lat": "-37.3159",
+                            "lng": "81.1496"
+                        }
+                    },
+                    "phone": "1-770-736-8031 x56442",
+                    "website": "hildegard.org",
+                    "company": {
+                        "name": "Romaguera-Crona",
+                        "catchPhrase": "Multi-layered client-server neural-net",
+                        "bs": "harness real-time e-markets"
+                    }
+                })
                 this.setState({monsters: users});
             })
     }
